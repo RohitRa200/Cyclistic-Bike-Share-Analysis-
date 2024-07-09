@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Cyclistic Bike Share Data Analysis</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1, h2, h3 {
+      color: #333;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+    code {
+      background-color: #f8f8f8;
+      padding: 2px 4px;
+      border: 1px solid #ddd;
+    }
+    pre {
+      background-color: #f8f8f8;
+      padding: 10px;
+      border: 1px solid #ddd;
+      overflow-x: auto;
+    }
+    .plot {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  
+  <h1>Cyclistic Bike Share Data Analysis</h1>
+  
+  <p>This document presents the analysis of bike share data from Cyclistic, a fictional bike-share company in Chicago.</p>
+  
+  <h2>Exploratory Data Analysis (EDA)</h2>
+  
+  <h3>Data Cleaning and Preparation</h3>
+  <p>First, we loaded the dataset and performed basic cleaning:</p>
+  <pre><code>
+    # R code for data loading and cleaning
+    library(dplyr)
+    library(lubridate)
+    
+    # Load data
+    data &lt;- read.csv("cyclistic_data.csv")
+    
+    # Clean data
+    data$Start.Time &lt;- as_datetime(data$Start.Time)
+    # More cleaning steps...
+  </code></pre>
+  
+  <h3>Visualization</h3>
+  <div class="plot">
+    <h4>Ride Duration Distribution</h4>
+    <img src="plots/ride_duration_distribution.png" alt="Ride Duration Distribution">
+    <p>Analysis of ride durations shows a peak around 15-20 minutes, indicating most rides are short.</p>
+  </div>
+  
+  <div class="plot">
+    <h4>Weekly Ride Trends</h4>
+    <img src="plots/weekly_ride_trends.png" alt="Weekly Ride Trends">
+    <p>Rides peak during weekdays, with significant drop-offs on weekends.</p>
+  </div>
+  
+  <h2>Insights and Recommendations</h2>
+  
+  <p>Based on the analysis, we found that...</p>
+  
+  <ul>
+    <li>Peak ride times are...</li>
+    <li>Differences between user types...</li>
+    <li>Seasonal variations...</li>
+  </ul>
+  
+  <h2>Conclusion</h2>
+  
+  <p>This analysis provides valuable insights into bike share usage patterns in Chicago. By understanding these patterns, Cyclistic can optimize bike availability, pricing strategies, and marketing efforts to better serve its customers.</p>
+  
+</body>
+</html>
